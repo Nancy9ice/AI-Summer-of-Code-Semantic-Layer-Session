@@ -1,0 +1,7 @@
+metrics:
+  - name: total_amount_before_tax
+    description: Total amount before tax per order.
+    type: simple
+    label: Total Amount Before Tax
+    type_params:
+      measure: total_amount_before_tax

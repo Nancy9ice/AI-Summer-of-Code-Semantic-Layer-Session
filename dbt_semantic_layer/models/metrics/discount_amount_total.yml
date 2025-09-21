@@ -1,0 +1,7 @@
+metrics:
+  - name: discount_amount_total
+    description: Average of total discount amount.
+    type: simple
+    label: Discount Amount Total
+    type_params:
+      measure: discount_amount_total

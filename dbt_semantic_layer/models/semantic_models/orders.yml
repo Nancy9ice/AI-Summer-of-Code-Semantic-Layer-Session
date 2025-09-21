@@ -1,0 +1,51 @@
+semantic_models:
+  - name: orders
+    defaults:
+      agg_time_dimension: order_date
+    description: This table is at the orders grain with one row per order
+    model: ref('sales')
+    entities:
+      - name: order_id
+        type: primary
+      - name: customer
+        type: foreign
+        expr: customer_id
+      - name: product
+        type: foreign
+        expr: product_id
+    measures:
+      - name: avg_amount_after_tax
+        description: Average Amount After Tax
+        agg: average
+      - name: avg_amount_before_tax
+        description: Average Amount Before Tax
+        agg: average
+      - name: avg_quantity
+        description: Average Quantity of products Sold
+        agg: average
+      - name: avg_tax
+        description: Average Tax Amount
+        agg: average
+      - name: total_tax
+        description: Total Tax Amount
+        agg: sum
+      - name: discount_amount_average
+        description: Average amount discounted on the product
+        agg: average
+      - name: discount_amount_total
+        description: Total amount discounted on the product
+        agg: sum
+      - name: total_amount_after_tax
+        description: Total Amount of Products Sold After Tax
+        agg: sum
+      - name: total_amount_before_tax
+        description: Total Amount of Products Sold Before Tax
+        agg: sum
+      - name: total_quantity
+        description: Total Quantity of Products Sold
+        agg: sum
+    dimensions:
+      - name: order_date
+        type: time
+        type_params: 
+          time_granularity: day

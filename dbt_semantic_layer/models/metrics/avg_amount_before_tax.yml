@@ -1,0 +1,7 @@
+metrics:
+  - name: avg_amount_before_tax
+    description: Average amount before tax per order.
+    type: simple
+    label: Average Amount Before Tax
+    type_params:
+      measure: avg_amount_before_tax

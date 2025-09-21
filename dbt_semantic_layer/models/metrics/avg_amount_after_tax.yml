@@ -1,0 +1,7 @@
+metrics:
+  - name: avg_amount_after_tax
+    description: Average amount after tax per order.
+    type: simple
+    label: Average Amount After Tax
+    type_params:
+      measure: avg_amount_after_tax

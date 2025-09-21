@@ -1,0 +1,7 @@
+metrics:
+  - name: total_tax
+    description: Total tax per order.
+    type: simple
+    label: Total Tax
+    type_params:
+      measure: total_tax

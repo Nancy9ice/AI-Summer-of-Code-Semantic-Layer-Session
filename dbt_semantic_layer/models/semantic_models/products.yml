@@ -1,0 +1,25 @@
+semantic_models:
+  - name: products
+    description: This table is at the products grain with one row per product
+    model: ref('product_list')
+    entities:
+      - name: product
+        type: primary
+        expr: product_id
+    dimensions:
+      - name: ean
+        type: categorical
+      - name: product_name
+        type: categorical
+      - name: product_category
+        type: categorical
+      - name: vendor
+        type: categorical
+      - name: price
+        type: categorical
+      - name: rating
+        type: categorical
+      - name: product_created_at
+        type: time
+        type_params:
+          time_granularity: day

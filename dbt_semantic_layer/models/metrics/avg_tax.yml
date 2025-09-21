@@ -1,0 +1,7 @@
+metrics:
+  - name: avg_tax
+    description: Average tax per order.
+    type: simple
+    label: Average Tax
+    type_params:
+      measure: avg_tax

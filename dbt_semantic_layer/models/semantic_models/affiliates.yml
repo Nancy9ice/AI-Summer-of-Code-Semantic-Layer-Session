@@ -1,0 +1,15 @@
+semantic_models:
+  - name: affiliates
+    description: This table is at the affiliates grain with one row per affiliate
+    model: ref('affiliate_info')
+    entities:
+      - name: affiliate
+        type: primary
+        expr: affiliate_number
+    dimensions:
+      - name: full_name
+        type: categorical
+      - name: email
+        type: categorical
+      - name: phone_number
+        type: categorical

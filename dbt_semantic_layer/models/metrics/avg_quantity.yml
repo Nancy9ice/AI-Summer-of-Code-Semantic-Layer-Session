@@ -1,0 +1,7 @@
+metrics:
+  - name: avg_quantity
+    description: Average quantity per order.
+    type: simple
+    label: Average Quantity
+    type_params:
+      measure: avg_quantity

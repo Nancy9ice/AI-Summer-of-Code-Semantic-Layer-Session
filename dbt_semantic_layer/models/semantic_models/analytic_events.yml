@@ -1,0 +1,22 @@
+semantic_models:
+  - name: analytic_events
+    description: This table is at the analytic events grain with one row per event
+    model: ref('analytic_event')
+    entities:
+      - name: affiliate
+        type: primary
+        expr: affiliate_id
+      - name: customer
+        type: foreign
+        expr: customer_id
+    dimensions:
+      - name: event
+        type: categorical
+      - name: timestamp
+        type: time
+        type_params:
+          time_granularity: day
+      - name: page_url
+        type: categorical
+      - name: button_label
+        type: categorical

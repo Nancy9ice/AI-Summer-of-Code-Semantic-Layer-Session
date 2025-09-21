@@ -1,0 +1,39 @@
+semantic_models:
+  - name: customers
+    defaults:
+      agg_time_dimension: signup_date
+    description: This table is at the customers grain with one row per customer
+    model: ref('customers')
+    entities:
+      - name: customer
+        type: primary
+        expr: customer_id
+    dimensions:
+      - name: email
+        type: categorical
+      - name: full_name
+        type: categorical
+      - name: subscription_plan
+        type: categorical
+      - name: traffic_source
+        type: categorical
+      - name: trial_converted
+        type: categorical
+      - name: active_subscription
+        type: categorical
+      - name: legacy_plan
+        type: categorical
+      - name: country_code
+        type: categorical
+      - name: signup_date
+        type: time
+        type_params: 
+          time_granularity: day
+      - name: trial_end_date
+        type: time
+        type_params:
+          time_granularity: day
+      - name: cancellation_date
+        type: time
+        type_params:
+          time_granularity: day

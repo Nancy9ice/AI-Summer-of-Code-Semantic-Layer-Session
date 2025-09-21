@@ -1,0 +1,7 @@
+metrics:
+  - name: total_quantity
+    description: Total quantity per order.
+    type: simple
+    label: Total Quantity
+    type_params:
+      measure: total_quantity
