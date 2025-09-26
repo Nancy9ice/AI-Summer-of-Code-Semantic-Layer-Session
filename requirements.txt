@@ -1,0 +1,2 @@
+dbt-snowflake==1.10.2
+dbt-metricflow[dbt-snowflake]==0.10.1
